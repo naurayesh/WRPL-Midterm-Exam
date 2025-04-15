@@ -22,7 +22,10 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
+        background: {
+          DEFAULT: 'hsl(var(--background))',
+          dark: 'hsl(var(--eventverse-blue-dark))'
+        },
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -63,15 +66,15 @@ export default {
           ring: 'hsl(var(--sidebar-ring))'
         },
         eventverse: {
-          purple: {
-            light: '#7B5FF5',
-            DEFAULT: '#5D3FD3',
-            dark: '#3E3499'
-          },
           blue: {
             light: '#33C3F0', 
             DEFAULT: '#1E70C5', 
             dark: '#1A5AA0'
+          },
+          purple: {
+            light: '#7B5FF5',
+            DEFAULT: '#5D3FD3',
+            dark: '#3E3499'
           },
           yellow: {
             light: '#FFF3B0', // Softer, less bright yellow

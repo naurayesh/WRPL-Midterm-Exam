@@ -70,9 +70,14 @@ export default {
 						dark: '#3E3499'
 					},
 					blue: {
-						light: '#24E0FF',
-						DEFAULT: '#0CA6F2',
-						dark: '#0A7EBB'
+						light: '#33C3F0', // Light blue from Eventia logo
+						DEFAULT: '#1E70C5', // Main blue from Eventia logo
+						dark: '#1A5AA0'  // Darker shade of Eventia blue
+					},
+					yellow: {
+						light: '#FFFC9C',
+						DEFAULT: '#FFF87A', // Eventia background yellow
+						dark: '#F0E95A'
 					},
 					pink: {
 						light: '#FF7E9D',

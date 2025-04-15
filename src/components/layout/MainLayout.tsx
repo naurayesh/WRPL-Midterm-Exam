@@ -29,19 +29,23 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     <div className="flex h-screen w-full bg-background">
       {/* Sidebar */}
       <aside 
-        className={`fixed z-30 inset-y-0 left-0 bg-sidebar flex flex-col transition-all duration-300 ease-in-out
+        className={`fixed z-30 inset-y-0 left-0 bg-eventverse-blue-dark flex flex-col transition-all duration-300 ease-in-out
                    ${sidebarOpen || !isMobile ? 'w-64' : 'w-0'} ${isMobile ? 'shadow-lg' : ''}`}
       >
-        <div className="flex items-center justify-between h-16 px-4 bg-eventverse-purple-dark">
-          <div className="flex items-center gap-3">
-            <span className="text-white font-bold text-xl">EventVerse</span>
+        <div className="flex items-center justify-between h-16 px-4 bg-eventverse-blue">
+          <div className="flex items-center gap-2">
+            <img 
+              src="/lovable-uploads/0b3e3633-708c-47ea-b348-d4b40f656477.png" 
+              alt="Eventia Logo" 
+              className="h-10 w-auto"
+            />
           </div>
           {isMobile && (
             <Button 
               variant="ghost" 
               size="icon" 
               onClick={toggleSidebar}
-              className="text-white hover:bg-eventverse-purple"
+              className="text-white hover:bg-eventverse-blue-light"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -53,7 +57,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <Home className="mr-4 h-5 w-5" />
                 Home
@@ -62,7 +66,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/events" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <Compass className="mr-4 h-5 w-5" />
                 Discover
@@ -71,7 +75,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/search" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light bg-eventverse-blue-light transition-colors"
               >
                 <Search className="mr-4 h-5 w-5" />
                 Search
@@ -80,7 +84,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/calendar" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <Calendar className="mr-4 h-5 w-5" />
                 Calendar
@@ -89,7 +93,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/tickets" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <Ticket className="mr-4 h-5 w-5" />
                 My Tickets
@@ -98,7 +102,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <li>
               <Link 
                 to="/cart" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <ShoppingCart className="mr-4 h-5 w-5" />
                 Cart
@@ -107,14 +111,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           </ul>
           
           <div className="px-3 mt-6">
-            <div className="h-px bg-eventverse-purple-dark"></div>
+            <div className="h-px bg-eventverse-blue-light"></div>
           </div>
           
           <ul className="mt-6 px-2">
             <li>
               <Link 
                 to="/profile" 
-                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-purple-dark transition-colors"
+                className="flex items-center text-sidebar-foreground px-4 py-3 text-base rounded-lg hover:bg-eventverse-blue-light transition-colors"
               >
                 <User className="mr-4 h-5 w-5" />
                 Profile
@@ -136,7 +140,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           >
             <Menu className="h-5 w-5" />
           </Button>
-          <div className="flex-1 text-lg font-semibold">EventVerse</div>
+          <div className="flex-1 flex items-center">
+            <img 
+              src="/lovable-uploads/0b3e3633-708c-47ea-b348-d4b40f656477.png" 
+              alt="Eventia Logo" 
+              className="h-8 w-auto mr-2"
+            />
+            <span className="text-lg font-semibold text-eventverse-blue-dark">Eventia</span>
+          </div>
           <div className="flex items-center space-x-2">
             <Button variant="ghost" size="icon">
               <User className="h-5 w-5" />

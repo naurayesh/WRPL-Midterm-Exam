@@ -23,7 +23,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const isMobile = useIsMobile();
   
+  // This function will be called when clicking the toggle button or the overlay
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+  
+  // This function will forcefully close the sidebar
+  const closeSidebar = () => setSidebarOpen(false);
   
   return (
     <div className="flex h-screen w-full bg-background">
@@ -44,7 +48,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
             <Button 
               variant="ghost" 
               size="icon" 
-              onClick={toggleSidebar}
+              onClick={closeSidebar}
               className="text-white hover:bg-eventverse-blue-light"
             >
               <X className="h-5 w-5" />
@@ -168,7 +172,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
       {isMobile && sidebarOpen && (
         <div 
           className="fixed inset-0 z-20 bg-black/50" 
-          onClick={toggleSidebar}
+          onClick={closeSidebar}
         />
       )}
     </div>

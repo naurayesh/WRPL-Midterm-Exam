@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,28 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				eventverse: {
+					purple: {
+						light: '#7B5FF5',
+						DEFAULT: '#5D3FD3',
+						dark: '#3E3499'
+					},
+					blue: {
+						light: '#24E0FF',
+						DEFAULT: '#0CA6F2',
+						dark: '#0A7EBB'
+					},
+					pink: {
+						light: '#FF7E9D',
+						DEFAULT: '#FF4D6D',
+						dark: '#E63256'
+					},
+					gray: {
+						light: '#F5F5F7',
+						DEFAULT: '#E1E1E6',
+						dark: '#9494A0'
+					}
 				}
 			},
 			borderRadius: {
@@ -84,11 +107,26 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-soft': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.8' }
+				},
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(10px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-soft': 'pulse-soft 2s infinite ease-in-out',
+				'fade-in': 'fade-in 0.3s ease-out'
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'event-gradient': 'linear-gradient(to right, var(--tw-gradient-stops))',
+				'event-card': 'linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%)'
 			}
 		}
 	},
